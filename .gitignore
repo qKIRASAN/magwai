@@ -1,0 +1,18 @@
+# Файлы и папки операционной системы
+.DS_Store
+Thumbs.db
+
+# Файлы редактора
+.idea
+.vscode
+*.sublime*
+
+# Вспомогательные файлы и папки
+node_modules/
+src/img/tmp/
+npm-debug.*
+package-lock.json
+*.ai
+*.log
+*.pdf
+*.psd

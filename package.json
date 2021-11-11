@@ -1,0 +1,56 @@
+{
+  "name": "magwai",
+  "private": true,
+  "author": "K. Gadomskii",
+  "description": "test task",
+  "devDependencies": {
+    "ajv": "^6.12.6",
+    "autoprefixer": "^10.3.4",
+    "browser-sync": "^2.27.5",
+    "cssnano": "^5.0.8",
+    "del": "^6.0.0",
+    "eslint": "^7.32.0",
+    "faker": "^5.5.3",
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-remember": "^1.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-webp": "^4.0.1",
+    "html-validate": "^5.4.1",
+    "lodash": "^4.17.21",
+    "postcss": "^8.3.6",
+    "posthtml-include": "^1.7.2",
+    "sass": "^1.39.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-config-recommended-scss": "^4.3.0",
+    "stylelint-scss": "^3.20.1",
+    "webpack-stream": "^6.1.2"
+  },
+  "scripts": {
+    "validate": "html-validate public/*.html",
+    "test": "stylelint src/scss/**/*.scss --fix --syntax scss && eslint src/js/**/*.js",
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "engines": {
+    "node": "14.15.5"
+  },
+  "dependencies": {
+    "imask": "^6.2.2"
+  }
+}

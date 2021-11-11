@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-recommended-scss"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "declaration-no-important": true,
+    "indentation": [2, {"ignore": ["inside-parens"]}],
+    "color-hex-length": "long",
+    "color-hex-case": "lower"
+  }
+}
