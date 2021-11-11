@@ -102,5 +102,175 @@
   </div>
 </header>
 <footer class="footer"></footer>
+<template id="popup">
+  <section class="popup">
+    <div class="popup__inner">
+      <div class="popup__content">
+        <button class="burger popup__burger"
+          type="button"
+          aria-label="Закрыть форму"
+        >
+          <svg class="icon popup__icon"
+            width="25"
+            height="26"
+            focusable="false"
+          >
+            <use xlink:href="./img/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="popup__description">
+          <h2>
+            Оставьте заявку
+          </h2>
+          <p>
+            Оставьте заявку и наш менеджер свяжется с вами в&nbsp;течение&nbsp;10&nbsp;-15 минут
+          </p>
+        </div>
+        <form class="form"
+          action="https://jsonplaceholder.typicode.com/posts"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="form__field">
+            <input type="text"
+              id="user-name"
+              name="user-name"
+              placeholder="Ваше имя*"
+              autocomplete="off"
+              required
+              aria-required="true"
+              aria-describedby="user-name-description"
+            >
+            <label for="user-name">
+              Ваше имя
+              <abbr title="Обязательное поле" aria-hidden="true">*</abbr>
+            </label>
+            <ul id="user-name-description" class="form__message" aria-live="polite">
+              <li>поле не должно быть пустым</li>
+              <li>должно начинаться и заканчиваться на букву</li>
+              <li>содержать только буквы и пробелы</li>
+              <li>минимальное количество букв: 2</li>
+              <li>
+                <i>Например: Ян</i>
+              </li>
+            </ul>
+          </div>
+          <div class="form__field">
+            <input type="email"
+              id="user-email"
+              name="user-email"
+              placeholder="magwai@info.ru"
+              autocomplete="off"
+              required
+              aria-required="true"
+              aria-describedby="user-email-description"
+            >
+            <label for="user-email">
+              E-mail
+              <abbr title="Обязательное поле" aria-hidden="true">*</abbr>
+            </label>
+            <ul id="user-email-description" class="form__message" aria-live="polite">
+              <li>поле не должно быть пустым</li>
+              <li>в имени пользователя (до символа @) допустимы только латинские буквы, символы: . , _ % + - ! ?</li>
+              <li>минимальное количество символов в имени пользователя: 2</li>
+              <li>
+                <i>Например: magwai@info.ru</i>
+              </li>
+            </ul>
+          </div>
+          <div class="form__field">
+            <input type="tel"
+              id="user-phone"
+              name="user-phone"
+              placeholder="+7(___) ___-__-__"
+              autocomplete="off"
+              maxlength="18"
+              pattern="\+?[0-9]{7,11}"
+              required
+              aria-required="true"
+              aria-describedby="user-phone-description"
+            >
+            <label for="user-phone">
+              Телефон
+            </label>
+            <ul id="user-phone-description" class="form__message" aria-live="polite">
+              <li>поле возможно оставить пустым</li>
+              <li>при заполнении поле должно содержать только цифры</li>
+              <li>пробелы, символы: + ( ) - будут подставлены автоматически</li>
+              <li>
+                <i>Например: +7 (987) 999-88-77</i>
+              </li>
+            </ul>
+          </div>
+          <div class="form__field">
+            <textarea id="user-message"
+              name="user-message"
+              placeholder="Ваш вопрос*"
+              rows="7"
+              cols="1"
+              autocomplete="off"
+              required
+              aria-required="true"
+              aria-describedby="user-message-description"
+            ></textarea>
+            <label for="user-message">
+              Ваш вопрос
+              <abbr title="Обязательное поле" aria-hidden="true">*</abbr>
+            </label>
+            <ul id="user-message-description" class="form__message" aria-live="polite">
+              <li>поле не должно быть пустым</li>
+              <li>должно содержать только буквы, пробелы, символы: ( ) . , ! ?</li>
+              <li>
+                <i>Например: Привет, Magwai!</i>
+              </li>
+            </ul>
+          </div>
+          <div class="submit form__submit">
+            <button class="request submit__request" type="submit">
+              Оставить заявку
+            </button>
+            <p class="submit__agreement">
+              Нажимая на кнопку “Оставить заявку” вы соглашаетесь
+              <a class="submit__link"
+                href="#" aria-label="Прочитать пользовательское соглашение"
+              >
+                с&nbsp;“Пользовательским&nbsp;соглашением”
+              </a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</template>
+<template id="success">
+  <section class="message">
+    <div class="message__inner">
+      <p class="message__description message__description--success">Ваша заявка успешно направлена!<br>
+        Hаш менеджер свяжется с вами в течение 10 -15 минут
+      </p>
+    </div>
+  </section>
+</template>
+<template id="error">
+  <section class="message">
+    <div class="message__inner">
+      <p class="message__description message__description--error">К сожалению что-то пошло не так...<br>
+        Попробуйте отправить заявку позднее
+      </p>
+    </div>
+  </section>
+</template>
+<template id="warning">
+  <section class="message">
+    <div class="message__inner">
+      <p class="message__description message__description--error">При загрузке данных возникла ошибка...<br>
+        Попробуйте перезагрузить страницу
+      </p>
+    </div>
+  </section>
+</template>
+<script src="./js/vendor.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>

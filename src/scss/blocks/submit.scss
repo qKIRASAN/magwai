@@ -1,0 +1,50 @@
+.submit {
+  display: flex;
+
+  @media (max-width: $large) {
+    flex-wrap: wrap;
+  }
+
+  p {
+    flex: 0 1 45%;
+    margin: 0 calc(6%) 20px;
+    padding: 0;
+
+    @media (max-width: $xxlarge) {
+      margin: 0 auto 20px calc(5%);
+    }
+
+    @media (max-width: $large) {
+      flex-basis: 90%;
+    }
+  }
+}
+
+.submit__request {
+  display: block;
+  flex: 0 1 36.6%;
+  margin: 0 7px 22px;
+
+  @media (max-width: $xxlarge) {
+    flex: 0 1 33%;
+  }
+
+  @media (max-width: $large) {
+    flex-basis: 90%;
+  }
+}
+
+.submit__link {
+  color: $popup-grey;
+  text-decoration: underline;
+  outline: none;
+}
+
+.submit__link:hover,
+.submit__link:focus {
+  color: $basic-white;
+}
+
+.submit__link:active {
+  color: darken($basic-white, 10%);
+}
