@@ -1,0 +1,22 @@
+.logo {
+  display: block;
+  outline: none;
+}
+
+.logo__icon {
+  color: $basic-white;
+
+  @media (max-width: $medium) {
+    width: 101px;
+    height: 38px;
+  }
+}
+
+.logo[href]:hover .logo__icon,
+.logo[href]:focus .logo__icon {
+  color: darken($extra-grey, 20%);
+}
+
+.logo[href]:active .logo__icon {
+  color: darken($extra-grey, 10%);
+}

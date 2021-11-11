@@ -1,0 +1,26 @@
+.phone {
+  padding: 19px calc(6.5%);
+  background-color: transparent;
+  border: 1px solid $basic-white;
+  transform: skewX(-17deg);
+  outline: none;
+
+  @media (max-width: $large) {
+    padding: 19px calc(9.4%);
+  }
+}
+
+.phone__icon {
+  margin: auto;
+  color: $basic-white;
+  transform: skewX(17deg);
+}
+
+.phone[href]:hover,
+.phone[href]:focus {
+  background-color: darken($extra-grey, 20%);
+}
+
+.phone[href]:active {
+  background-color: darken($extra-grey, 10%);
+}

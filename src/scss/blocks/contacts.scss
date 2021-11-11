@@ -1,0 +1,39 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  @media (max-width: $medium) {
+    display: none;
+  }
+
+  &--visible {
+    @media (max-width: $medium) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+  }
+}
+
+.contacts__phone {
+  @media (max-width: $medium) {
+    flex: 0 1 100%;
+    margin-bottom: 6px;
+  }
+}
+
+.contacts__request {
+  display: block;
+  flex: 0 1 68.2%;
+  margin-right: auto;
+  margin-left: calc(8%);
+
+  @media (max-width: $large) {
+    margin-left: auto;
+  }
+
+  @media (max-width: $medium) {
+    flex: 0 1 100%;
+  }
+}
