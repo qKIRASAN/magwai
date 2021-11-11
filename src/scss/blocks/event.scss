@@ -1,0 +1,145 @@
+.event {
+  display: none;
+  position: relative;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  overflow: hidden;
+
+  @media (max-width: $large) {
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+  }
+
+  @media (max-width: $medium) {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+  &--active {
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 389px;
+    background-image: url("../img/shade.png");
+    background-image: -webkit-image-set(
+        url("../img/shade.webp") 1x,
+        url("../img/shade.png") 1x);
+    z-index: $z-index-background;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/shade@2x.png");
+      background-image: -webkit-image-set(
+          url("../img/shade@2x.webp") 2x,
+          url("../img/shade@2x.png") 2x);
+    }
+
+    @media (max-width: $large) {
+      height: 339px;
+    }
+
+    @media (max-width: $medium) {
+      height: 369px;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: $z-index-background;
+  }
+}
+
+.event__inner {
+  padding-top: 580px;
+  padding-bottom: 152px;
+
+  @media (max-width: $large) {
+    padding-top: 213px;
+    padding-bottom: 41px;
+  }
+
+  @media (max-width: $medium) {
+    padding-top: 68px;
+    padding-bottom: 113px;
+  }
+}
+
+.event__description {
+  max-width: 650px;
+
+  @media (max-width: $large) {
+    max-width: 485px;
+  }
+
+  @media (max-width: $medium) {
+    margin: 0 auto;
+    min-width: 292px;
+    min-height: 284px;
+    text-align: center;
+  }
+
+  h3 {
+    margin: 17px auto 40px;
+    font-size: 42px;
+    line-height: 51px;
+    text-transform: uppercase;
+
+    @media (max-width: $large) {
+      font-size: 32px;
+    }
+
+    @media (max-width: $medium) {
+      font-size: 22px;
+    }
+  }
+
+  br {
+    @media (max-width: $medium) {
+      display: none;
+    }
+  }
+
+  p {
+    margin: 16px auto 40px;
+    font-size: 16px;
+    opacity: 0.79;
+
+    @media (max-width: $large) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $medium) {
+      min-height: 42px;
+    }
+  }
+
+  span {
+    text-transform: uppercase;
+  }
+}
+
+.event__request {
+  margin-bottom: 18px;
+  margin-left: 9px;
+  width: 264px;
+
+  @media (max-width: $large) {
+    width: 202px;
+  }
+
+  @media (max-width: $medium) {
+    margin: 15px auto;
+  }
+}
+
+.event--active .event__request {
+  display: block;
+}

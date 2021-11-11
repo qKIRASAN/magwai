@@ -101,6 +101,70 @@
     </div>
   </div>
 </header>
+<main>
+  <h1 class="visually-hidden">Тестовая реализация интенет-сайта дизайн-студии "Магвай"</h1>
+  <section class="events" aria-labelledby="events">
+    <h2 id="events" class="visually-hidden">События</h2>
+    <ul class="events__list">
+      <li class="event event--active">
+        <include src="includes/event-img.html">
+          {
+          "img": "earth",
+          "alt": "Поверхность планеты Земля ночью. Фотография сделана с низкой орбиты"
+          }
+        </include>
+        <div class="event__inner page__container">
+          <div class="event__description">
+            <h3>Полет Илона Маска и&nbsp;Dogie coin</h3>
+            <p>В прошлый четверг все офигели от полета <span>Dogie coin</span> на марс.</p>
+            <a class="request event__request" href="#">
+              Оставить заявку
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="event">
+        <include src="includes/event-img.html">
+          {
+          "img": "truck",
+          "alt": "Старый ржавый ЗИЛ посреди поля под проливным дождём"
+          }
+        </include>
+        <div class="event__inner page__container">
+          <div class="event__description">
+            <h3>Dogie coin<br>упал</h3>
+            <p>Все в шоке, я потерял все деньги</p>
+            <a class="request event__request" href="#">
+              Оставить заявку
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="event">
+        <include src="includes/event-img.html">
+          {
+          "img": "dollars",
+          "alt": "Большая куча долларов номиналом 1USD крупным планом"
+          }
+        </include>
+        <div class="event__inner page__container">
+          <div class="event__description">
+            <h3>Эпическое возвращения на&nbsp;хаи</h3>
+            <p>Все в шоке, я снова богат</p>
+            <a class="request event__request" href="#">
+              Оставить заявку
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="toggles">
+      <button type="button" aria-label="перейти к слайду Dogie coin">Dogie coin</button>
+      <button type="button" aria-label="перейти к слайду Падение">Падение</button>
+      <button type="button" aria-label="перейти к слайду Возвращение">Возвращение</button>
+    </div>
+  </section>
+</main>
 <footer class="footer"></footer>
 <template id="popup">
   <section class="popup">

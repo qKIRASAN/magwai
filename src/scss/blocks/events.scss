@@ -1,0 +1,16 @@
+.events {
+  min-height: 1033px;
+  color: $basic-white;
+
+  @media (max-width: $large) {
+    min-height: 552px;
+  }
+
+  @media (max-width: $medium) {
+    min-height: 497px;
+  }
+}
+
+.events__list {
+  @include reset-list;
+}
