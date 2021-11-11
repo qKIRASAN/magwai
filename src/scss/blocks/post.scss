@@ -1,0 +1,150 @@
+.post {
+  position: relative;
+  flex: 0 1 calc((100% - 120px) / 5);
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $basic-white;
+  margin-bottom: 30px;
+  min-height: 621px;
+
+  @media (max-width: $xxlarge) {
+    flex: 0 1 calc((100% - 90px) / 4);
+  }
+
+  @media (max-width: $xlarge) {
+    flex: 0 1 calc((100% - 60px) / 3);
+  }
+
+  @media (max-width: $large) {
+    flex: 0 1 calc((100% - 30px) / 2);
+    max-width: 400px;
+  }
+
+  @media (max-width: $medium) {
+    flex: 1 1 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  picture {
+    width: 100%;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.post:not(:nth-child(5n + 1)) {
+  @media (min-width: $xxlarge + 1) {
+    margin-left: 30px;
+  }
+}
+
+.post:not(:nth-child(4n + 1)) {
+  @media (min-width: $xlarge + 1) and (max-width: $xxlarge) {
+    margin-left: 30px;
+  }
+}
+
+.post:not(:nth-child(3n + 1)) {
+  @media (min-width: $large + 1) and (max-width: $xlarge) {
+    margin-left: 30px;
+  }
+}
+
+.post:not(:nth-child(2n + 1)) {
+  @media (min-width: $medium + 1) and (max-width: $large) {
+    margin-left: auto;
+  }
+}
+
+.post__content {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 28px 30px 24px;
+  height: calc(100% - 185px);
+
+  p {
+    margin: 6px auto 6px 0;
+    line-height: 24px;
+  }
+}
+
+.post__title {
+  display: flex;
+  flex-direction: column;
+  min-height: 105px;
+  margin-bottom: 8px;
+
+  h3 {
+    margin: 0 auto 15px 0;
+    min-height: 26px;
+    font-weight: 700;
+    font-family: $mulish;
+    font-size: inherit;
+    line-height: 26px;
+    color: $primary;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-top: auto;
+    font-size: 16px;
+    line-height: 26px;
+    color: $primary;
+  }
+}
+
+.post__bottom {
+  margin-top: auto;
+  margin-right: -4px;
+
+  p {
+    margin-bottom: 25px;
+    font-size: 12px;
+  }
+}
+
+.post__author {
+  color: inherit;
+  outline: none;
+
+  b {
+    font-weight: 700;
+  }
+}
+
+.post__link {
+  display: block;
+  margin-top: 0;
+  padding: 16px 5px;
+  font-weight: 700;
+  font-family: $mulish;
+  font-size: 14px;
+  line-height: 18px;
+  color: $basic-white;
+  background-color: $primary;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.post__author:hover,
+.post__author:focus {
+  color: darken($basic-grey, 20%);
+}
+
+.post__author:active {
+  color: darken($basic-grey, 10%);
+}
+
+.post__link:hover,
+.post__link:focus {
+  background-color: darken($primary, 20%);
+}
+
+.post__link:active {
+  background-color: darken(rgba($primary, 0.79), 10%);
+}
